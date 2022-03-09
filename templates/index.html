@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div>
+    <br>
+    <h1>Works log</h1>
+    <br>
+</div>
+{% for item in answer%}
+
+<div>
+    <h2>Action #{{ item[0] }}</h2>
+
+    <div class="container">
+      <div class="row">
+        <div class="col">Title of activity</div>
+        <div class="col">Team Leader</div>
+        <div class="col">Duration</div>
+        <div class="col">List of collaborators</div>
+        <div class="col">is finished</div>
+
+          <div class="w-100"></div>
+
+        <div class="col">{{ item.job }}</div>
+        <div class="col">{{ item.team_leader }}</div>
+        <div class="col">{{ item.start_date }}</div>
+        <div class="col">{{ item.collaborators }}</div>
+        <div class="col">{{ item.is_finished }}</div>
+
+      </div>
+    </div>
+</div>
+
+{% endfor %}
+{% endblock %}

@@ -19,3 +19,6 @@ class User(SqlAlchemyBase):
     modified_date = sqlalchemy.Column(sqlalchemy.DateTime, default=datetime.datetime.now)
 
     jobs_list = orm.relation("Jobs", back_populates='team_leader_instance')
+
+    def __repr__(self):
+        return f"User <{self.name}>"
